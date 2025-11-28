@@ -13,14 +13,14 @@ export default function TopButton() {
             <div className="fixed w-full bottom-36">
                 <div className="relative z-1 w-full max-w-md">
                     <button
-                        className={`floating-btn bg-white border border-gray300 ${
+                        className={`floating-btn bg-white border border-gray300 text-gray500 ${
                             scroll > 100
                                 ? "translate-y-0 opacity-100"
                                 : "translate-y-15 opacity-0 pointer-events-none"
                         }`}
                         onClick={scrollToTopHandler}
                     >
-                        <ArrowUp color="#E4E4E4" size={28} strokeWidth={1.5} />
+                        <ArrowUp size={28} strokeWidth={1.5} />
                     </button>
                 </div>
             </div>
