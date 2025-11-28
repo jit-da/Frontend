@@ -19,7 +19,7 @@ export default function Card({
                     <span className="text-red-500">
                         {sale !== 0 && sale.toString() + "% "}
                     </span>
-                    {(price * (1 - sale / 100)).toString()}원
+                    {(price * (1 - sale / 100)).toLocaleString("ko-KR")}원
                 </p>
             </div>
         </>
