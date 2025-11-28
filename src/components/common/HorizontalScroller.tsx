@@ -20,6 +20,7 @@ export default function HorizontalScroller({
 
         const onWheel = (e: WheelEvent) => {
             target.scrollLeft += e.deltaY;
+            e.preventDefault();
         };
         const onDown = (e: MouseEvent) => {
             isDown = true;
@@ -35,7 +36,7 @@ export default function HorizontalScroller({
             target.style.cursor = "grab";
         };
 
-        target.addEventListener("wheel", onWheel);
+        target.addEventListener("wheel", onWheel, { passive: false });
         target.addEventListener("mousedown", onDown);
         window.addEventListener("mousemove", onMove);
         window.addEventListener("mouseup", onUp);
