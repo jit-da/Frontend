@@ -62,7 +62,7 @@ button {
         @apply flex justify-center items-center;
     }
     .floating-btn {
-        @apply absolute flex right-5 w-15 h-15 justify-center items-center rounded-full duration-300;
+        @apply absolute flex right-5 w-17 h-17 justify-center items-center rounded-full duration-300;
     }
     .header-btn {
         @apply w-10 h-10 flex justify-center items-center hover:bg-gray100 active:bg-gray100 duration-100 ease-out rounded-lg;

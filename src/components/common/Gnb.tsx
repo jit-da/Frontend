@@ -4,7 +4,7 @@ import GnbItem from "./GnbItem";
 export default function Gnb() {
     return (
         <>
-            <nav className="z-1 fixed w-full max-w-md h-[72px] bottom-0 grid grid-cols-5 bg-white border-t border-gray200">
+            <nav className="z-1 fixed w-full max-w-md h-18 bottom-0 grid grid-cols-5 bg-white border-t border-gray200">
                 <GnbItem to="/">
                     <House strokeWidth={1.5} />홈
                 </GnbItem>

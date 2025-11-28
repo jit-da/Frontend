@@ -22,12 +22,12 @@ export const MAIN_BUTTON_LIST = [
     },
     {
         title: "마감재",
-        sub: "내 공간을 빛내줄 마감재",
+        sub: "공간을 빛내줄 마감재",
         src: magamjae,
     },
     {
         title: "페인트",
-        sub: "브랜드별 색상 비교 · 쉽고 빠른 주문",
+        sub: "브랜드별 색상 비교부터 주문까지",
         src: paint,
     },
 ];
