@@ -21,7 +21,7 @@ export default function MainButton({
             >
                 <div className="p-5 pb-0">
                     <h1 className="text-xl pretendard-semibold">{title}</h1>
-                    <h2 className="text-xs text-gray600">{sub}</h2>
+                    <h2 className="text-sm text-gray600">{sub}</h2>
                 </div>
                 <img src={img} className="opacity-85" />
             </button>

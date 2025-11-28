@@ -32,14 +32,14 @@ export default function Home() {
                         img={MAIN_BUTTON_LIST[1].src}
                     />
                     <MainButton
-                        className="col-span-2 w-full h-20 flex-row"
+                        className="col-span-2 w-full h-22 flex-row"
                         title={MAIN_BUTTON_LIST[2].title}
                         sub={MAIN_BUTTON_LIST[2].sub}
                         img={MAIN_BUTTON_LIST[2].src}
                     />
 
                     <div className="col-span-2 w-full pt-2">
-                        중장비 대여
+                        <h3 className="pretendard-medium">중장비 대여</h3>
                         <div className="grid grid-cols-5 mt-1">
                             {HEAVY_EQUIPMENT_LIST.slice(0, 5).map((i) => (
                                 <Icon icon={i.src} key={i.id}>
@@ -78,8 +78,10 @@ export default function Home() {
                 <div className="w-full h-25 bg-gray500" />
 
                 <div className="py-5">
-                    <h3 className="pl-5">회원님을 위한 추천상품</h3>
-                    <HorizontalScroller className="flex flex-row gap-3 mt-2 px-5">
+                    <h3 className="pl-5 pretendard-medium">
+                        회원님을 위한 추천상품
+                    </h3>
+                    <HorizontalScroller className="flex flex-row gap-3 mt-2 px-5 pb-2">
                         <Card
                             title="파이프 원형 롱소켓"
                             sub="20mm"
