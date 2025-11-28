@@ -27,12 +27,12 @@ export default function Header({
                 <h1>{children}</h1>
                 <div className="absolute right-3 flex">
                     {search && (
-                        <button className="w-10 h-10 flex justify-center items-center hover:bg-gray100 rounded-lg">
+                        <button className="w-10 h-10 flex justify-center items-center hover:bg-gray100 active:bg-gray100 duration-100 ease-out rounded-lg">
                             <Search strokeWidth={1.5} />
                         </button>
                     )}
                     {cart && (
-                        <button className="w-10 h-10 flex justify-center items-center hover:bg-gray100 rounded-lg">
+                        <button className="w-10 h-10 flex justify-center items-center hover:bg-gray100 active:bg-gray100 duration-100 ease-out rounded-lg">
                             <Handbag strokeWidth={1.5} />
                         </button>
                     )}

@@ -8,8 +8,9 @@ export default function Gnb() {
                 <NavLink
                     to="/"
                     className={({ isActive }) =>
-                        `mx-5 flex flex-col items-center justify-center text-xs ease-in duration-100 hover:text-gray700 ${
-                            !isActive && "text-gray600 pretendard-light"
+                        `mx-5 flex flex-col items-center justify-center text-xs ease-out duration-100 ${
+                            !isActive &&
+                            "text-gray600 hover:text-gray700 active:text-gray700 pretendard-light"
                         }`
                     }
                 >
@@ -18,8 +19,9 @@ export default function Gnb() {
                 <NavLink
                     to="/category"
                     className={({ isActive }) =>
-                        `mx-5 flex flex-col items-center justify-center text-xs ease-in duration-100 hover:text-gray700 ${
-                            !isActive && "text-gray600 pretendard-light"
+                        `mx-5 flex flex-col items-center justify-center text-xs ease-out duration-100 ${
+                            !isActive &&
+                            "text-gray600 hover:text-gray700 active:text-gray700 pretendard-light"
                         }`
                     }
                 >
@@ -29,8 +31,9 @@ export default function Gnb() {
                 <NavLink
                     to="/like"
                     className={({ isActive }) =>
-                        `mx-5 flex flex-col items-center justify-center text-xs ease-in duration-100 hover:text-gray700 ${
-                            !isActive && "text-gray600 pretendard-light"
+                        `mx-5 flex flex-col items-center justify-center text-xs ease-out duration-100 ${
+                            !isActive &&
+                            "text-gray600 hover:text-gray700 active:text-gray700 pretendard-light"
                         }`
                     }
                 >
@@ -40,8 +43,9 @@ export default function Gnb() {
                 <NavLink
                     to="/receipt"
                     className={({ isActive }) =>
-                        `mx-5 flex flex-col items-center justify-center text-xs ease-in duration-100 hover:text-gray700 ${
-                            !isActive && "text-gray600 pretendard-light"
+                        `mx-5 flex flex-col items-center justify-center text-xs ease-out duration-100 ${
+                            !isActive &&
+                            "text-gray600 hover:text-gray700 active:text-gray700 pretendard-light"
                         }`
                     }
                 >
@@ -51,8 +55,9 @@ export default function Gnb() {
                 <NavLink
                     to="/mypage"
                     className={({ isActive }) =>
-                        `mx-5 flex flex-col items-center justify-center text-xs ease-in duration-100 hover:text-gray700 ${
-                            !isActive && "text-gray600 pretendard-light"
+                        `mx-5 flex flex-col items-center justify-center text-xs ease-out duration-100 ${
+                            !isActive &&
+                            "text-gray600 hover:text-gray700 active:text-gray700 pretendard-light"
                         }`
                     }
                 >

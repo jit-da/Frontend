@@ -1,4 +1,3 @@
-import useScroll from "@/hooks/useScroll";
 import type React from "react";
 
 export default function FloatingButton({
@@ -10,16 +9,12 @@ export default function FloatingButton({
     children: React.ReactNode;
     onClick: () => void;
 }) {
-    const scroll = useScroll();
-
     return (
         <>
             <div className="fixed w-full bottom-36">
                 <div className="relative z-2 w-full max-w-md">
                     <button
-                        className={`floating-btn flex flex-col bg-gray1000 text-white ${
-                            scroll > 100 && "-translate-y-17"
-                        }`}
+                        className="floating-btn duration-100 flex flex-col bg-gray1000 hover:bg-gray900 ease-out action:bg-gray900 text-white"
                         onClick={onClick}
                     >
                         {icon}
