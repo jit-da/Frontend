@@ -24,7 +24,7 @@ export default function Header({
                         </span>
                     )}
                 </div>
-                <h1>{children}</h1>
+                <h1 className="pretendard-semibold">{children}</h1>
                 <div className="absolute right-3 flex">
                     {search && (
                         <button className="header-btn">
