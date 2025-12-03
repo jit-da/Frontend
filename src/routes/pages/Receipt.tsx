@@ -11,6 +11,7 @@ import { useModalStore } from "@/stores/useModal";
 import { ChevronDown, RotateCcw } from "lucide-react";
 import { useState } from "react";
 import { format, subMonths } from "date-fns";
+import TopButton from "@/components/common/TopButton";
 
 export default function Receipt() {
     const [tab, setTab] = useState<string>(RECEIPT_LIST[0].name);
@@ -92,6 +93,7 @@ export default function Receipt() {
             </div>
 
             <Gnb />
+            <TopButton />
             {openName === "조회 기간" && (
                 <PeriodSheet
                     select={period}

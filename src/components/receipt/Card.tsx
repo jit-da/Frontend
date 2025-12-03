@@ -1,5 +1,4 @@
 import Button from "../common/Button";
-import TopButton from "../common/TopButton";
 
 export default function Card() {
     return (
@@ -41,7 +40,6 @@ export default function Card() {
                 </div>
                 <Button>재주문하기</Button>
             </div>
-            <TopButton />
         </>
     );
 }

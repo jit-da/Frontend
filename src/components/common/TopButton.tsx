@@ -11,7 +11,7 @@ export default function TopButton() {
     return (
         <>
             <div className="fixed w-full bottom-40">
-                <div className="relative right-5 z-1 w-full max-w-md">
+                <div className="relative z-1 w-full max-w-md">
                     <button
                         className={`floating-btn bg-white border border-gray300 text-gray500 ${
                             scroll > 100
