@@ -12,6 +12,7 @@ import {
     HEAVY_EQUIPMENT_LIST,
     PHONE_NUMBER,
 } from "@/constants/home";
+import { RECOMMEND_PRODUCTS_LIST } from "@/test/recommend";
 
 export default function Home() {
     const [isBoxOpen, setIsBoxOpen] = useState<boolean>(false);
@@ -82,54 +83,15 @@ export default function Home() {
                         회원님을 위한 추천상품
                     </h3>
                     <HorizontalScroller className="flex flex-row gap-3 mt-2 px-5 pb-2">
-                        <Card
-                            title="파이프 원형 롱소켓"
-                            sub="20mm"
-                            price={2000}
-                            sale={10}
-                        />
-                        <Card
-                            title="파이프 원형 롱소켓"
-                            sub="25mm"
-                            price={2200}
-                            sale={10}
-                        />
-                        <Card
-                            title="파이프 원형 롱소켓"
-                            sub="30mm"
-                            price={2400}
-                            sale={10}
-                        />
-                        <Card
-                            title="아이소 핑크"
-                            sub="뭐적지"
-                            price={4500}
-                            sale={0}
-                        />
-                        <Card
-                            title="파이프 원형 롱소켓"
-                            sub="20mm"
-                            price={2000}
-                            sale={10}
-                        />
-                        <Card
-                            title="파이프 원형 롱소켓"
-                            sub="25mm"
-                            price={2200}
-                            sale={10}
-                        />
-                        <Card
-                            title="파이프 원형 롱소켓"
-                            sub="30mm"
-                            price={2400}
-                            sale={10}
-                        />
-                        <Card
-                            title="아이소 핑크"
-                            sub="뭐적지"
-                            price={4500}
-                            sale={0}
-                        />
+                        {RECOMMEND_PRODUCTS_LIST.map((v, i) => (
+                            <Card
+                                key={i}
+                                title={v.name}
+                                sub={v.sub}
+                                price={v.price}
+                                sale={v.sale}
+                            />
+                        ))}
                     </HorizontalScroller>
                 </div>
             </div>
