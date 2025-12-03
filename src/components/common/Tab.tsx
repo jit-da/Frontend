@@ -14,7 +14,8 @@ export default function Tab({
                     <button
                         key={i.id}
                         className={`flex justify-center items-center duration-200 ${
-                            select !== i.name && "text-gray500"
+                            select !== i.name &&
+                            "text-gray500 hover:text-gray600 active:text-gray600"
                         }`}
                         onClick={() => setSelect(i.name)}
                     >
