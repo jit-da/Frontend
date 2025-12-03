@@ -3,7 +3,7 @@ export const RECEIPT_LIST = [
         order_number: 1102124513521,
         state: "배송중",
         date: new Date("2025-12-02 18:06:20"),
-        adress: "봉수대로 1440번길 10",
+        address: "봉수대로 1440번길 10",
         payment: "무통장입금",
         products: [
             {
@@ -100,7 +100,7 @@ export const RECEIPT_LIST = [
         order_number: 1102124512214,
         state: "픽업완료",
         date: new Date("2025-11-18 10:30:20"),
-        adress: "봉수대로 1440번길 10",
+        address: "봉수대로 1440번길 10",
         payment: "무통장입금",
         products: [
             {
@@ -133,7 +133,7 @@ export const RECEIPT_LIST = [
         order_number: 1102124512213,
         state: "주문취소",
         date: new Date("2025-11-18 10:00:10"),
-        adress: "봉수대로 1440번길 10",
+        address: "봉수대로 1440번길 10",
         payment: "무통장입금",
         products: [
             {
