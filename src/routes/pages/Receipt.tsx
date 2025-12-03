@@ -6,15 +6,16 @@ import Card from "@/components/receipt/Card";
 import DateModal from "@/components/receipt/DateModal";
 import PeriodSheet from "@/components/receipt/PeriodSheet";
 import StateSheet from "@/components/receipt/StateSheet";
-import { RECEIPT_LIST } from "@/constants/receipt";
+import { RECEIPT_TAB_LIST } from "@/constants/receipt";
 import { useModalStore } from "@/stores/useModal";
 import { ChevronDown, RotateCcw } from "lucide-react";
 import { useState } from "react";
 import { format, subMonths } from "date-fns";
 import TopButton from "@/components/common/TopButton";
+import { RECEIPT_LIST } from "@/test/receipt";
 
 export default function Receipt() {
-    const [tab, setTab] = useState<string>(RECEIPT_LIST[0].name);
+    const [tab, setTab] = useState<string>(RECEIPT_TAB_LIST[0].name);
     const [period, setPeriod] = useState<string>("조회 기간");
     const [state, setState] = useState<string[]>([]);
     const today = new Date();
@@ -43,8 +44,8 @@ export default function Receipt() {
             <div className="relative top-15.5 w-full flex flex-col gap-3 max-w-md min-h-20 bg-white px-5 py-3 border-b border-gray200">
                 <SearchBar
                     placeholder={
-                        RECEIPT_LIST.find((i) => i.name === tab)?.placeholder ??
-                        ""
+                        RECEIPT_TAB_LIST.find((i) => i.name === tab)
+                            ?.placeholder ?? ""
                     }
                 />
                 <div className="flex gap-3 flex-wrap">
@@ -88,10 +89,16 @@ export default function Receipt() {
             </div>
 
             <div className="full bg-gray100 p-5 pt-20.5 pb-23 flex flex-col gap-3">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {RECEIPT_LIST.map((v, i) => (
+                    <Card
+                        key={i}
+                        date={v.date}
+                        state={v.state}
+                        products={v.products}
+                        price={v.total.price}
+                        sale={v.total.sale}
+                    />
+                ))}
             </div>
 
             <Gnb />

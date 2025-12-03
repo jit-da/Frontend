@@ -1,4 +1,4 @@
-export const RECEIPT_LIST = [
+export const RECEIPT_TAB_LIST = [
     {
         id: 1,
         name: "배송 · 픽업",
@@ -28,6 +28,4 @@ export const STATE_LIST = [
     { id: 6, name: "결제완료" },
     { id: 7, name: "주문접수" },
     { id: 8, name: "주문취소" },
-    { id: 9, name: "반품" },
-    { id: 10, name: "교환" },
 ];
