@@ -88,17 +88,31 @@ export default function Receipt() {
                 </div>
             </div>
 
-            <div className="full bg-gray100 p-5 pt-20.5 pb-23 flex flex-col gap-3">
-                {RECEIPT_LIST.map((v, i) => (
-                    <Card
-                        key={i}
-                        date={v.date}
-                        state={v.state}
-                        products={v.products}
-                        price={v.total.price}
-                        sale={v.total.sale}
-                    />
-                ))}
+            <div className="full min-h-[calc(100%-182px)] bg-gray100 p-5 pt-20.5 pb-23 flex flex-col gap-3">
+                {tab === RECEIPT_TAB_LIST[0].name ? (
+                    RECEIPT_LIST.length === 0 ? (
+                        <span className="fixed top-1/2 left-1/2 -translate-x-1/2 text-gray600">
+                            구매한 내역이 없어요
+                        </span>
+                    ) : (
+                        RECEIPT_LIST.map((v, i) => (
+                            <Card
+                                key={i}
+                                date={v.date}
+                                state={v.state}
+                                products={v.products}
+                                price={v.total.price}
+                                sale={v.total.sale}
+                            />
+                        ))
+                    )
+                ) : [].length === 0 ? (
+                    <span className="fixed top-1/2 left-1/2 -translate-x-1/2 text-gray600">
+                        대여한 내역이 없어요
+                    </span>
+                ) : (
+                    <></>
+                )}
             </div>
 
             <Gnb />
