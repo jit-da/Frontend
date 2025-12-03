@@ -16,7 +16,7 @@ export const PERIOD_LIST = [
     { id: 2, name: "3개월" },
     { id: 3, name: "6개월" },
     { id: 4, name: "1년" },
-    { id: 4, name: "직접 설정" },
+    { id: 5, name: "직접 설정" },
 ];
 
 export const STATE_LIST = [
