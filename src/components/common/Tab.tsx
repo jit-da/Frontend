@@ -9,7 +9,12 @@ export default function Tab({
 }) {
     return (
         <>
-            <nav className="relative top-15.5 w-full max-w-md h-10 bg-white px-5 grid grid-cols-2 pretendard-medium border-b border-gray200">
+            <nav
+                className="relative top-15.5 w-full max-w-md h-10 bg-white px-5 grid grid-cols-2 pretendard-medium border-b border-gray200"
+                style={{
+                    gridTemplateColumns: `repeat(${RECEIPT_LIST.length}, 1fr)`,
+                }}
+            >
                 {RECEIPT_LIST.map((i) => (
                     <button
                         key={i.id}
@@ -25,11 +30,10 @@ export default function Tab({
                 <div
                     className="absolute bottom-0 h-0.5 bg-gray1000 duration-200"
                     style={{
-                        width: "calc((100% - 40px) / 2)",
-                        left:
-                            select === RECEIPT_LIST[0].name
-                                ? "20px"
-                                : "calc((100% - 40px) / 2 + 20px)",
+                        width: `calc((100% - 40px) / ${RECEIPT_LIST.length})`,
+                        left: `calc(20px + ${RECEIPT_LIST.findIndex(
+                            (item) => item.name === select
+                        )} * (100% - 40px) / ${RECEIPT_LIST.length})`,
                     }}
                 ></div>
             </nav>
