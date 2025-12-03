@@ -41,10 +41,12 @@ export default function Receipt() {
             <Header cart>주문내역</Header>
             <Tab select={tab} setSelect={setTab} />
             <div className="relative top-15.5 w-full flex flex-col gap-3 max-w-md min-h-20 bg-white px-5 py-3 border-b border-gray200">
-                <SearchBar>
-                    {RECEIPT_LIST.find((i) => i.name === tab)?.placeholder ??
-                        ""}
-                </SearchBar>
+                <SearchBar
+                    placeholder={
+                        RECEIPT_LIST.find((i) => i.name === tab)?.placeholder ??
+                        ""
+                    }
+                />
                 <div className="flex gap-3 flex-wrap">
                     {rollback && (
                         <button
