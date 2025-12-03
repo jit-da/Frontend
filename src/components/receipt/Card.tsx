@@ -38,7 +38,7 @@ export default function Card() {
                         {(1764369).toLocaleString("ko-KR")}원
                     </span>
                 </div>
-                <Button>재주문하기</Button>
+                <Button>상세보기</Button>
             </div>
         </>
     );
