@@ -1,6 +1,6 @@
 import Gnb from "@/components/common/Gnb";
 import Header from "@/components/common/Header";
-import Profile from "@/components/mypage/profile";
+import Profile from "@/components/mypage/Profile";
 import Grade from "@/components/mypage/Grade";
 import Progress from "@/components/mypage/Progress";
 import ButtonList from "@/components/mypage/ButtonList";
