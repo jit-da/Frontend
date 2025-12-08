@@ -23,6 +23,13 @@
     --color-gray300: #e4e4e4;
     --color-gray200: #efefef;
     --color-gray100: #f7f7f7;
+
+    /* Grade */
+    --color-bronze: #987c54;
+    --color-silver: #a5c2ca;
+    --color-gold: #ffcb1f;
+    --color-vip: #ff0037;
+    --color-vvip: #2f2f2f;
 }
 
 *::-webkit-scrollbar {

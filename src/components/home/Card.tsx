@@ -11,8 +11,8 @@ export default function Card({
 }) {
     return (
         <>
-            <div className="w-30 flex flex-col">
-                <div className="w-30 h-30 border border-gray200 rounded-xl mb-1"></div>
+            <button className="w-30 flex flex-col">
+                <div className="w-30 h-30 border border-gray200 rounded-xl mb-1" />
                 <h4 className="w-full text-ellipsis line-clamp-1">{title}</h4>
                 <h5 className="text-sm pretendard-light text-gray600 text-ellipsis line-clamp-1">
                     {sub}
@@ -23,7 +23,7 @@ export default function Card({
                     </span>
                     {(price * (1 - sale / 100)).toLocaleString("ko-KR")}원
                 </p>
-            </div>
+            </button>
         </>
     );
 }
