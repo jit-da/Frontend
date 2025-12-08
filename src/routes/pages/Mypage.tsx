@@ -10,7 +10,7 @@ export default function Mypage() {
     return (
         <>
             <Header cart>마이페이지</Header>
-            <div className="w-full py-15.5 pb-18 flex flex-col gap-2">
+            <div className="full py-15.5 pb-18 flex flex-col gap-2">
                 <Profile />
                 <Grade grade="BRONZE" />
                 <ButtonList />
