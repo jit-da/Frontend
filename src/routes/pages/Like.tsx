@@ -24,7 +24,7 @@ export default function Like() {
                             price={v.price}
                             sale={v.sale}
                             like={true}
-                        ></Card>
+                        />
                     ))}
                 </div>
             )}
