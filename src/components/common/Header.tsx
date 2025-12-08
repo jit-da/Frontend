@@ -22,7 +22,7 @@ export default function Header({
                 <div className="absolute left-5">
                     {back && (
                         <button
-                            className="header-btn"
+                            className="header-btn -ml-2"
                             onClick={() => navigate(-1)}
                         >
                             <ChevronLeft size={28} strokeWidth={1.5} />
