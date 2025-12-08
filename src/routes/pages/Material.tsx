@@ -9,7 +9,7 @@ import TopButton from "@/components/common/TopButton";
 
 export default function Material() {
     const [middle, setMiddle] = useState("전체");
-    const [minor, setMior] = useState("전체");
+    const [minor, setMinor] = useState("전체");
     const middleList = MATERIAL_CATEGORY.map((i) => i.middle_category);
     const [minorList, setMinorList] = useState<string[]>([]);
 
@@ -25,7 +25,7 @@ export default function Material() {
 
         const fetch = () => {
             setMinorList(["전체", ...next]);
-            setMior("전체");
+            setMinor("전체");
         };
         fetch();
     }, [middle]);
@@ -45,7 +45,7 @@ export default function Material() {
                 <Tab
                     list={minorList}
                     select={minor}
-                    setSelect={setMior}
+                    setSelect={setMinor}
                     className={`text-sm duration-200 ease-in-out z-0 ${
                         middle === "전체"
                             ? "max-h-0 opacity-0 overflow-hidden -translate-y-full"
