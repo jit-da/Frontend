@@ -22,7 +22,7 @@ export default function Gnb() {
                 </GnbItem>
                 <GnbItem to="/mypage">
                     <User strokeWidth={1.5} />
-                    내정보
+                    마이페이지
                 </GnbItem>
             </nav>
         </>
