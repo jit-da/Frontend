@@ -96,3 +96,74 @@ export const HEAVY_EQUIPMENT_LIST = [
 ];
 
 export const PHONE_NUMBER = "010-8119-9296";
+
+export const MATERIAL_CATEGORY = [
+    {
+        middle_category: "전체",
+        minor_category: [],
+    },
+    {
+        middle_category: "건자재",
+        minor_category: [
+            "석고보드",
+            "시멘트",
+            "단열재",
+            "석고텍스",
+            "이보드",
+            "목자재",
+        ],
+    },
+    {
+        middle_category: "금속",
+        minor_category: [
+            "파이프",
+            "형강",
+            "철판",
+            "갈바",
+            "앵글",
+            "판넬",
+            "경량",
+        ],
+    },
+    {
+        middle_category: "방수자재",
+        minor_category: ["방수제"],
+    },
+    {
+        middle_category: "설비자재",
+        minor_category: [
+            "PB배관(에이콘)",
+            "PE배관(폴리에틸렌)",
+            "PP배관(폴리프로필렌)",
+            "PVC배관",
+            "메타폴관",
+            "스텐주름관",
+            "PPC배관",
+            "엑셀배관",
+        ],
+    },
+    {
+        middle_category: "전기자재",
+        minor_category: [
+            "PF파이프",
+            "후렉시블",
+            "CD관",
+            "IV전선",
+            "CV케이블",
+            "HIV전선",
+            "부자재",
+        ],
+    },
+    {
+        middle_category: "유리",
+        minor_category: ["일반유리", "강화유리", "접합유리"],
+    },
+    {
+        middle_category: "닥트",
+        minor_category: ["모터", "직관", "엘보", "레듀사", "부속"],
+    },
+    {
+        middle_category: "잡자재",
+        minor_category: [],
+    },
+];

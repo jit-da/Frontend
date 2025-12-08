@@ -11,10 +11,10 @@ export default function Card({
 }) {
     return (
         <>
-            <button className="w-30 flex flex-col">
-                <div className="w-30 h-30 border border-gray200 rounded-xl mb-1" />
+            <button className="w-30 flex flex-col text-start">
+                <div className="w-30 h-30 border border-gray200 rounded-xl mb-2" />
                 <h4 className="w-full text-ellipsis line-clamp-1">{title}</h4>
-                <h5 className="text-sm pretendard-light text-gray600 text-ellipsis line-clamp-1">
+                <h5 className="text-sm pretendard-light text-gray600 text-ellipsis line-clamp-1 -mt-1">
                     {sub}
                 </h5>
                 <p className="text-sm pretendard-semibold">

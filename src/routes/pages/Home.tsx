@@ -13,6 +13,7 @@ import {
     PHONE_NUMBER,
 } from "@/constants/home";
 import { RECOMMEND_PRODUCTS_LIST } from "@/test/recommend";
+import { Link } from "react-router";
 
 export default function Home() {
     const [isBoxOpen, setIsBoxOpen] = useState<boolean>(false);
@@ -22,11 +23,13 @@ export default function Home() {
             <Header logo search cart />
             <div className="full pt-15.5 pb-18">
                 <div className="grid grid-cols-2 gap-3 px-5 py-2">
-                    <MainButton
-                        title={MAIN_BUTTON_LIST[0].title}
-                        sub={MAIN_BUTTON_LIST[0].sub}
-                        img={MAIN_BUTTON_LIST[0].src}
-                    />
+                    <Link to="/material">
+                        <MainButton
+                            title={MAIN_BUTTON_LIST[0].title}
+                            sub={MAIN_BUTTON_LIST[0].sub}
+                            img={MAIN_BUTTON_LIST[0].src}
+                        />
+                    </Link>
                     <MainButton
                         title={MAIN_BUTTON_LIST[1].title}
                         sub={MAIN_BUTTON_LIST[1].sub}

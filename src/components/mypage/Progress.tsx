@@ -4,7 +4,7 @@ export default function Progress() {
     return (
         <div className="px-5 py-3">
             <div className="flex justify-between">
-                주문/배송 조회
+                <h3 className="pretendard-medium">주문/배송 조회</h3>
                 <button className="text-sm text-gray600">전체보기</button>
             </div>
             <ul className="w-full flex justify-between items-center text-gray500 my-2 px-2">

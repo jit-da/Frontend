@@ -1,42 +1,37 @@
-import { RECEIPT_TAB_LIST } from "@/constants/receipt";
+import { twMerge } from "tailwind-merge";
 
 export default function Tab({
+    list,
     select,
     setSelect,
+    className,
 }: {
+    list: string[];
     select: string;
-    setSelect: (s: string) => void;
+    setSelect: (c: string) => void;
+    className?: string;
 }) {
     return (
-        <>
-            <nav
-                className="relative top-15.5 w-full max-w-md h-10 bg-white px-5 grid grid-cols-2 pretendard-medium border-b border-gray200"
-                style={{
-                    gridTemplateColumns: `repeat(${RECEIPT_TAB_LIST.length}, 1fr)`,
-                }}
-            >
-                {RECEIPT_TAB_LIST.map((i) => (
+        <div className={twMerge(`relative overflow-hidden`, className)}>
+            <nav className="px-2 w-full flex overflow-scroll border-b pt-2 border-gray200 bg-white">
+                {list.map((v, i) => (
                     <button
-                        key={i.id}
-                        className={`flex justify-center items-center duration-200 ${
-                            select !== i.name &&
-                            "text-gray500 hover:text-gray600 active:text-gray600"
-                        }`}
-                        onClick={() => setSelect(i.name)}
+                        key={i}
+                        className="px-3 whitespace-nowrap"
+                        onClick={() => setSelect(v)}
                     >
-                        {i.name}
+                        <div
+                            className={`h-full border-b-2 flex items-end pb-2 border-clear duration-100 ease-in text-gray500 ${
+                                v === select
+                                    ? "pretendard-semibold text-gray1000 border-gray1000"
+                                    : "hover:text-gray700 active:text-gray700 border-white"
+                            }`}
+                        >
+                            {v}
+                        </div>
                     </button>
                 ))}
-                <div
-                    className="absolute bottom-0 h-0.5 bg-gray1000 duration-200"
-                    style={{
-                        width: `calc((100% - 40px) / ${RECEIPT_TAB_LIST.length})`,
-                        left: `calc(20px + ${RECEIPT_TAB_LIST.findIndex(
-                            (item) => item.name === select
-                        )} * (100% - 40px) / ${RECEIPT_TAB_LIST.length})`,
-                    }}
-                ></div>
             </nav>
-        </>
+        </div>
     );
 }
