@@ -33,15 +33,10 @@ export default function Card({
                     </p>
                     <div className="w-full mt-1 flex gap-3 justify-end">
                         <Handbag strokeWidth={1.5} />
-                        {like ? (
-                            <Heart
-                                strokeWidth={1.5}
-                                fill="#fb2c36"
-                                color="#fb2c36"
-                            />
-                        ) : (
-                            <Heart strokeWidth={1.5} />
-                        )}
+                        <Heart
+                            strokeWidth={1.5}
+                            className={like ? "text-red-500 fill-current" : ""}
+                        />
                     </div>
                 </div>
             </button>
