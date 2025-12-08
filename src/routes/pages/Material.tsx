@@ -23,7 +23,11 @@ export default function Material() {
             return () => clearTimeout(timer);
         }
 
-        queueMicrotask(() => setMinorList(["전체", ...next]));
+        const fetch = () => {
+            setMinorList(["전체", ...next]);
+            setMior("전체");
+        };
+        fetch();
     }, [middle]);
 
     return (
