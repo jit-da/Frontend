@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Receipt from "./pages/Receipt";
 import Like from "./pages/Like";
 import Mypage from "./pages/Mypage";
+import Material from "./pages/Material";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     {
         path: "/mypage",
         element: <Mypage />,
+    },
+    {
+        path: "/material",
+        element: <Material />,
     },
 ]);
 
