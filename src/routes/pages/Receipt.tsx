@@ -1,4 +1,3 @@
-import Gnb from "@/components/common/Gnb";
 import Header from "@/components/common/Header";
 import SearchBar from "@/components/common/SearchBar";
 import Tab from "@/components/receipt/Tab";
@@ -115,7 +114,6 @@ export default function Receipt() {
                 )}
             </div>
 
-            <Gnb />
             <TopButton />
             {openName === "조회 기간" && (
                 <PeriodSheet

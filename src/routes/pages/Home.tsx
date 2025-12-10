@@ -1,7 +1,6 @@
 import Header from "@/components/common/Header";
 import MainButton from "@/components/home/MainButton";
 import Icon from "@/components/home/Icon";
-import Gnb from "@/components/common/Gnb";
 import FloatingButton from "@/components/common/FloatingButton";
 import { ChevronDown, ChevronUp, Phone } from "lucide-react";
 import { useState } from "react";
@@ -104,7 +103,6 @@ export default function Home() {
             >
                 전화 문의
             </FloatingButton>
-            <Gnb />
         </>
     );
 }

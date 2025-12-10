@@ -1,4 +1,3 @@
-import Gnb from "@/components/common/Gnb";
 import Header from "@/components/common/Header";
 import Profile from "@/components/mypage/Profile";
 import Grade from "@/components/mypage/Grade";
@@ -19,7 +18,6 @@ export default function Mypage() {
                 <div className="w-full h-3 bg-gray100" />
                 <MenuList />
             </div>
-            <Gnb />
         </>
     );
 }

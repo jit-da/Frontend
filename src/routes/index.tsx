@@ -4,23 +4,18 @@ import Receipt from "./pages/Receipt";
 import Like from "./pages/Like";
 import Mypage from "./pages/Mypage";
 import Material from "./pages/Material";
+import MainLayout from "./layouts/MainLayout";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home />,
-    },
-    {
-        path: "/like",
-        element: <Like />,
-    },
-    {
-        path: "/receipt",
-        element: <Receipt />,
-    },
-    {
-        path: "/mypage",
-        element: <Mypage />,
+        Component: MainLayout,
+        children: [
+            { index: true, element: <Home /> },
+            { path: "like", element: <Like /> },
+            { path: "receipt", element: <Receipt /> },
+            { path: "mypage", element: <Mypage /> },
+        ],
     },
     {
         path: "/material",
