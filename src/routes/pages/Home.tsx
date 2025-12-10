@@ -17,6 +17,15 @@ import { Link } from "react-router";
 export default function Home() {
     const [isBoxOpen, setIsBoxOpen] = useState<boolean>(false);
 
+    const openBoxHandler = () => {
+        if (isBoxOpen) {
+            window.scrollBy({ top: -200, behavior: "smooth" });
+        } else {
+            window.scrollBy({ top: 200, behavior: "smooth" });
+        }
+        setIsBoxOpen(!isBoxOpen);
+    };
+
     return (
         <>
             <Header logo search cart />
@@ -67,7 +76,7 @@ export default function Home() {
                         </div>
                         <button
                             className="w-full h-10 flex items-center justify-center text-gray500 hover:bg-gray100 active:bg-gray100 rounded-xl duration-100 ease-out"
-                            onClick={() => setIsBoxOpen(!isBoxOpen)}
+                            onClick={() => openBoxHandler()}
                         >
                             {isBoxOpen ? (
                                 <ChevronUp size={28} strokeWidth={1.5} />
