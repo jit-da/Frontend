@@ -21,7 +21,7 @@ export default function Tab({
                         onClick={() => setSelect(v)}
                     >
                         <div
-                            className={`h-full border-b-2 flex items-end pb-2 border-clear duration-100 ease-in text-gray500 ${
+                            className={`h-full border-b-2 flex items-end pb-2 border-clear duration-100 ease-in text-gray600 ${
                                 v === select
                                     ? "pretendard-semibold text-gray1000 border-gray1000"
                                     : "hover:text-gray700 active:text-gray700 border-white"

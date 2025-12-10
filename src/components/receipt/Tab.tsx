@@ -20,7 +20,7 @@ export default function Tab({
                         key={i.id}
                         className={`flex justify-center items-center duration-200 ${
                             select !== i.name &&
-                            "text-gray500 hover:text-gray600 active:text-gray600"
+                            "text-gray600 hover:text-gray700 active:text-gray700"
                         }`}
                         onClick={() => setSelect(i.name)}
                     >
