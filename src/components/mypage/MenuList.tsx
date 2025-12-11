@@ -9,8 +9,11 @@ import {
     Repeat,
 } from "lucide-react";
 import MenuListItem from "./MenuListItem";
+import { useModalStore } from "@/stores/useModal";
 
 export default function MenuList() {
+    const { openModal } = useModalStore();
+
     return (
         <ul className="pt-2 pb-3 flex flex-col">
             <MenuListItem>
@@ -41,7 +44,7 @@ export default function MenuList() {
                 <Info strokeWidth={1.5} size={20} />앱 버전{" "}
                 <span className="text-gray600">1.0.0</span>
             </MenuListItem>
-            <MenuListItem>
+            <MenuListItem onClick={() => openModal("logout")}>
                 <LogOut strokeWidth={1.5} size={20} />
                 로그아웃
             </MenuListItem>
