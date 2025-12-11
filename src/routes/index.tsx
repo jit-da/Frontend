@@ -5,6 +5,7 @@ import Like from "./pages/Like";
 import Mypage from "./pages/Mypage";
 import Material from "./pages/Material";
 import MainLayout from "./layouts/MainLayout";
+import Login from "./pages/Login";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             { path: "receipt", element: <Receipt /> },
             { path: "mypage", element: <Mypage /> },
         ],
+    },
+    {
+        path: "/login",
+        element: <Login />,
     },
     {
         path: "/material",
