@@ -1,4 +1,5 @@
 import { twMerge } from "tailwind-merge";
+import HorizontalScroller from "./HorizontalScroller";
 
 export default function Tab({
     list,
@@ -13,7 +14,7 @@ export default function Tab({
 }) {
     return (
         <div className={twMerge(`relative overflow-hidden`, className)}>
-            <nav className="px-2 w-full flex overflow-scroll border-b pt-2 border-gray200 bg-white">
+            <HorizontalScroller className="px-2 w-full flex overflow-scroll border-b pt-2 border-gray200 bg-white">
                 {list.map((v, i) => (
                     <button
                         key={i}
@@ -31,7 +32,7 @@ export default function Tab({
                         </div>
                     </button>
                 ))}
-            </nav>
+            </HorizontalScroller>
         </div>
     );
 }
