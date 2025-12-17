@@ -4,6 +4,7 @@ import Input from "@/components/login/Input";
 import { useState } from "react";
 import kakao from "@/assets/icons/login/kakao.svg";
 import google from "@/assets/icons/login/google.svg";
+import { Link } from "react-router";
 
 export default function Login() {
     const [id, setId] = useState("");
@@ -24,8 +25,8 @@ export default function Login() {
                 </Input>
                 <Button className="mt-2">로그인</Button>
                 <div className="w-full flex justify-between">
-                    <a href="/">비밀번호 찾기</a>
-                    <a href="/">회원가입</a>
+                    <Link to="/">비밀번호 찾기</Link>
+                    <Link to="/">회원가입</Link>
                 </div>
                 <div className="relative flex  justify-center w-full mt-5 mb-8">
                     <hr className="w-full absolute top-3 text-gray300" />
