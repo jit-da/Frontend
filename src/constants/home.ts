@@ -13,6 +13,9 @@ import home12 from "@/assets/icons/home/12.png";
 import jajae from "@/assets/images/jajae.png";
 import magamjae from "@/assets/images/magamjae.png";
 import paint from "@/assets/images/paint.png";
+import category1 from "@/assets/icons/category/1.svg";
+import category2 from "@/assets/icons/category/2.svg";
+import category3 from "@/assets/icons/category/3.svg";
 
 export const MAIN_BUTTON_LIST = [
     {
@@ -104,14 +107,17 @@ export const MATERIAL_CATEGORY = [
     },
     {
         middle_category: "건자재",
+        icon: category1,
         minor_category: ["석고보드", "시멘트", "단열재", "석고텍스"],
     },
     {
         middle_category: "목자재",
+        icon: category2,
         minor_category: ["합판", "오징어합판", "MDF", "보드", "각재", "몰딩"],
     },
     {
         middle_category: "금속",
+        icon: category3,
         minor_category: [
             "파이프",
             "형강",
@@ -124,10 +130,12 @@ export const MATERIAL_CATEGORY = [
     },
     {
         middle_category: "방수자재",
+        icon: category1,
         minor_category: ["방수제"],
     },
     {
         middle_category: "설비자재",
+        icon: category1,
         minor_category: [
             "PB배관(에이콘)",
             "PE배관(폴리에틸렌)",
@@ -141,6 +149,7 @@ export const MATERIAL_CATEGORY = [
     },
     {
         middle_category: "전기자재",
+        icon: category1,
         minor_category: [
             "PF파이프",
             "후렉시블",
@@ -153,14 +162,17 @@ export const MATERIAL_CATEGORY = [
     },
     {
         middle_category: "유리",
+        icon: category1,
         minor_category: ["일반유리", "강화유리", "접합유리"],
     },
     {
         middle_category: "닥트",
+        icon: category1,
         minor_category: ["모터", "직관", "엘보", "레듀사", "부속"],
     },
     {
         middle_category: "잡자재",
+        icon: category1,
         minor_category: [],
     },
 ];

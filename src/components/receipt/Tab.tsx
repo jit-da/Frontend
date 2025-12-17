@@ -1,16 +1,23 @@
+import { twMerge } from "tailwind-merge";
+
 export default function Tab({
     tabList,
     select,
     setSelect,
+    className,
 }: {
     tabList: string[];
     select: string;
     setSelect: (s: string) => void;
+    className?: string;
 }) {
     return (
         <>
             <nav
-                className="relative top-15.5 w-full max-w-md h-10 bg-white px-5 grid grid-cols-2 pretendard-medium border-b border-gray200"
+                className={twMerge(
+                    "relative top-15.5 w-full max-w-md h-10 bg-white px-5 grid grid-cols-2 pretendard-medium border-b border-gray200",
+                    className
+                )}
                 style={{
                     gridTemplateColumns: `repeat(${tabList.length}, 1fr)`,
                 }}

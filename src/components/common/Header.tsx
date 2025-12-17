@@ -7,18 +7,24 @@ export default function Header({
     logo,
     search,
     cart,
+    white,
 }: {
     children?: React.ReactNode;
     back?: boolean;
     logo?: boolean;
     search?: boolean;
     cart?: boolean;
+    white?: boolean;
 }) {
     const navigate = useNavigate();
 
     return (
         <>
-            <header className="z-2 fixed w-full max-w-md h-15.5 center bg-white/85 backdrop-blur-[2px]">
+            <header
+                className={`z-2 fixed top-0 w-full max-w-md h-15.5 center backdrop-blur-[2px] ${
+                    white ? "bg-white" : "bg-white/85"
+                }`}
+            >
                 <div className="absolute left-5">
                     {back && (
                         <button
