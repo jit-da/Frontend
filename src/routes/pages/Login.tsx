@@ -13,7 +13,7 @@ export default function Login() {
     return (
         <>
             <div className="full center flex flex-col px-5 gap-3">
-                <img src={logo} />
+                <img src={logo} alt="logo" />
                 <Input value={id} onChange={(e) => setId(e.target.value)}>
                     아이디
                 </Input>
