@@ -37,11 +37,7 @@ export default function Button({
                 {...props}
             >
                 <div className="flex items-center justify-center gap-2">
-                    {icon && (
-                        <span className="relative aspect-squere w-5">
-                            <img src={icon} alt="아이콘" sizes="20px" />
-                        </span>
-                    )}
+                    {icon && <img src={icon} alt="" />}
                     {children}
                 </div>
             </button>
