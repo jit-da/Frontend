@@ -14,10 +14,15 @@ export default function Login() {
         <>
             <div className="full center flex flex-col px-5 gap-3">
                 <img src={logo} alt="logo" />
-                <Input value={id} onChange={(e) => setId(e.target.value)}>
+                <Input
+                    id="id"
+                    value={id}
+                    onChange={(e) => setId(e.target.value)}
+                >
                     아이디
                 </Input>
                 <Input
+                    id="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 >
