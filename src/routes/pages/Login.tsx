@@ -29,7 +29,7 @@ export default function Login() {
                     <Link to="/">회원가입</Link>
                 </div>
                 <div className="relative flex  justify-center w-full mt-5 mb-8">
-                    <hr className="w-full absolute top-3 text-gray300" />
+                    <hr className="w-full absolute top-3 border-gray300" />
                     <span className="absolute px-5 bg-white text-gray500">
                         간편 로그인
                     </span>
