@@ -16,7 +16,7 @@ export default function CategoryBox({
     return (
         <li ref={ref} className="w-full flex flex-col p-2 mt-1 scroll-mt-28">
             <button className="-mt-3 px-3 py-2 flex gap-2 items-center rounded-xl hover:bg-gray100 active:bg-gray100 duration-100">
-                <img src={category.icon} alt="" />
+                <img src={category.icon} alt={category.middle_category} />
                 {category.middle_category}
                 <ChevronRight strokeWidth={1.5} className="text-gray500" />
             </button>
