@@ -104,14 +104,11 @@ export const MATERIAL_CATEGORY = [
     },
     {
         middle_category: "건자재",
-        minor_category: [
-            "석고보드",
-            "시멘트",
-            "단열재",
-            "석고텍스",
-            "이보드",
-            "목자재",
-        ],
+        minor_category: ["석고보드", "시멘트", "단열재", "석고텍스"],
+    },
+    {
+        middle_category: "목자재",
+        minor_category: ["합판", "오징어합판", "MDF", "보드", "각재", "몰딩"],
     },
     {
         middle_category: "금속",

@@ -1,13 +1,15 @@
+import React from "react";
 import { twMerge } from "tailwind-merge";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    color?: "main" | "gray";
+    color?: "black" | "main" | "yellow" | "white" | "gray";
     icon?: string;
     className?: string;
 }
 
 export default function Button({
-    color,
+    color = "black",
+    icon,
     children,
     disabled,
     className,
@@ -17,21 +19,27 @@ export default function Button({
         <>
             <button
                 className={twMerge(
-                    `relative w-full h-10 rounded-lg duration-200
-                ${
-                    disabled
-                        ? "bg-gray200 dark:bg-gray900 text-gray500 dark:text-gray600 cursor-default"
-                        : color === "main"
-                        ? "bg-main500 text-white active:bg-main600"
-                        : color === "gray"
-                        ? "bg-gray200 text-gray1000 active:bg-gray300"
-                        : "bg-gray1000 text-white active:bg-gray900"
-                }`,
+                    `h-13 w-full rounded-xl duration-200 ease-in-out ${
+                        disabled
+                            ? "bg-gray200 text-gray500 cursor-default"
+                            : color === "black"
+                            ? "bg-gray1000 hover:bg-gray900 active:bg-gray900 text-white"
+                            : color === "main"
+                            ? "bg-main500 hover:bg-main600 active:bg-main600 text-white"
+                            : color === "yellow"
+                            ? "cursor-pointer bg-[#F9E95A] hover:bg-[#EFDE3E] active:bg-[#EFDE3E]"
+                            : color === "white"
+                            ? "border-gray300 hover:bg-gray100 active:bg-gray100 border bg-white"
+                            : "bg-gray200 text-gray1000 hover:bg-gray300 active:bg-gray300"
+                    } `,
                     className
                 )}
                 {...props}
             >
-                {children}
+                <div className="flex items-center justify-center gap-2">
+                    {icon && <img src={icon} alt="" />}
+                    {children}
+                </div>
             </button>
         </>
     );

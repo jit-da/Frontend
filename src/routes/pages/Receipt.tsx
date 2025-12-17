@@ -1,4 +1,3 @@
-import Gnb from "@/components/common/Gnb";
 import Header from "@/components/common/Header";
 import SearchBar from "@/components/common/SearchBar";
 import Tab from "@/components/receipt/Tab";
@@ -40,7 +39,11 @@ export default function Receipt() {
     return (
         <>
             <Header cart>주문내역</Header>
-            <Tab select={tab} setSelect={setTab} />
+            <Tab
+                tabList={RECEIPT_TAB_LIST.map((i) => i.name)}
+                select={tab}
+                setSelect={setTab}
+            />
             <div className="relative top-15.5 w-full flex flex-col gap-3 max-w-md min-h-20 bg-white px-5 py-3 border-b border-gray200">
                 <SearchBar
                     placeholder={
@@ -115,7 +118,6 @@ export default function Receipt() {
                 )}
             </div>
 
-            <Gnb />
             <TopButton />
             {openName === "조회 기간" && (
                 <PeriodSheet

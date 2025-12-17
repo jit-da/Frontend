@@ -1,5 +1,4 @@
 import Card from "@/components/common/Card";
-import Gnb from "@/components/common/Gnb";
 import Header from "@/components/common/Header";
 import { LIKE_LIST } from "@/test/like";
 
@@ -28,7 +27,6 @@ export default function Like() {
                     ))}
                 </div>
             )}
-            <Gnb />
         </>
     );
 }

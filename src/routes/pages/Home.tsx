@@ -1,7 +1,6 @@
 import Header from "@/components/common/Header";
 import MainButton from "@/components/home/MainButton";
 import Icon from "@/components/home/Icon";
-import Gnb from "@/components/common/Gnb";
 import FloatingButton from "@/components/common/FloatingButton";
 import { ChevronDown, ChevronUp, Phone } from "lucide-react";
 import { useState } from "react";
@@ -17,6 +16,15 @@ import { Link } from "react-router";
 
 export default function Home() {
     const [isBoxOpen, setIsBoxOpen] = useState<boolean>(false);
+
+    const openBoxHandler = () => {
+        if (isBoxOpen) {
+            window.scrollBy({ top: -200, behavior: "smooth" });
+        } else {
+            window.scrollBy({ top: 200, behavior: "smooth" });
+        }
+        setIsBoxOpen(!isBoxOpen);
+    };
 
     return (
         <>
@@ -68,7 +76,7 @@ export default function Home() {
                         </div>
                         <button
                             className="w-full h-10 flex items-center justify-center text-gray500 hover:bg-gray100 active:bg-gray100 rounded-xl duration-100 ease-out"
-                            onClick={() => setIsBoxOpen(!isBoxOpen)}
+                            onClick={() => openBoxHandler()}
                         >
                             {isBoxOpen ? (
                                 <ChevronUp size={28} strokeWidth={1.5} />
@@ -104,7 +112,6 @@ export default function Home() {
             >
                 전화 문의
             </FloatingButton>
-            <Gnb />
         </>
     );
 }

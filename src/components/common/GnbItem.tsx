@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 export default function GnbItem({
     to,
@@ -7,10 +7,19 @@ export default function GnbItem({
     to: string;
     children: React.ReactNode;
 }) {
+    const navigate = useNavigate();
+
+    const linkHandler = (e: React.MouseEvent) => {
+        e.preventDefault();
+        navigate(to);
+        window.scrollTo(0, 0);
+    };
+
     return (
         <>
             <NavLink
                 to={to}
+                onClick={linkHandler}
                 className={({ isActive }) =>
                     `mx-5 flex flex-col items-center justify-center text-xs ease-out duration-100 ${
                         !isActive &&

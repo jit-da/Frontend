@@ -3,14 +3,14 @@
 
 @theme {
     /* Primary */
-    --color-main800: #000000;
-    --color-main700: #000000;
-    --color-main600: #ff9500;
+    --color-main800: #e38400;
+    --color-main700: #ff9500;
+    --color-main600: #ffae00;
     --color-main500: #ffbb00;
-    --color-main400: #000000;
-    --color-main300: #000000;
-    --color-main200: #000000;
-    --color-main100: #000000;
+    --color-main400: #ffc628;
+    --color-main300: #f38171;
+    --color-main200: #ffe18e;
+    --color-main100: #ffeebe;
 
     /* Gray */
     --color-gray1000: #2f2f2f;

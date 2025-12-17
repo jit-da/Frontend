@@ -1,9 +1,9 @@
-import { RECEIPT_TAB_LIST } from "@/constants/receipt";
-
 export default function Tab({
+    tabList,
     select,
     setSelect,
 }: {
+    tabList: string[];
     select: string;
     setSelect: (s: string) => void;
 }) {
@@ -12,28 +12,28 @@ export default function Tab({
             <nav
                 className="relative top-15.5 w-full max-w-md h-10 bg-white px-5 grid grid-cols-2 pretendard-medium border-b border-gray200"
                 style={{
-                    gridTemplateColumns: `repeat(${RECEIPT_TAB_LIST.length}, 1fr)`,
+                    gridTemplateColumns: `repeat(${tabList.length}, 1fr)`,
                 }}
             >
-                {RECEIPT_TAB_LIST.map((i) => (
+                {tabList.map((v, i) => (
                     <button
-                        key={i.id}
+                        key={i}
                         className={`flex justify-center items-center duration-200 ${
-                            select !== i.name &&
-                            "text-gray500 hover:text-gray600 active:text-gray600"
+                            select !== v &&
+                            "text-gray600 hover:text-gray700 active:text-gray700"
                         }`}
-                        onClick={() => setSelect(i.name)}
+                        onClick={() => setSelect(v)}
                     >
-                        {i.name}
+                        {v}
                     </button>
                 ))}
                 <div
                     className="absolute bottom-0 h-0.5 bg-gray1000 duration-200"
                     style={{
-                        width: `calc((100% - 40px) / ${RECEIPT_TAB_LIST.length})`,
-                        left: `calc(20px + ${RECEIPT_TAB_LIST.findIndex(
-                            (item) => item.name === select
-                        )} * (100% - 40px) / ${RECEIPT_TAB_LIST.length})`,
+                        width: `calc((100% - 40px) / ${tabList.length})`,
+                        left: `calc(20px + ${tabList.findIndex(
+                            (item) => item === select
+                        )} * (100% - 40px) / ${tabList.length})`,
                     }}
                 ></div>
             </nav>
