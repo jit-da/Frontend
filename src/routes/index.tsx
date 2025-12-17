@@ -6,6 +6,7 @@ import Mypage from "./pages/Mypage";
 import Material from "./pages/Material";
 import MainLayout from "./layouts/MainLayout";
 import Login from "./pages/Login";
+import Category from "./pages/Category";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
         Component: MainLayout,
         children: [
             { index: true, element: <Home /> },
+            { path: "category", element: <Category /> },
             { path: "like", element: <Like /> },
             { path: "receipt", element: <Receipt /> },
             { path: "mypage", element: <Mypage /> },
